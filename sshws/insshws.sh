@@ -17,11 +17,11 @@ wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.co
 #System SSL/TLS Websocket-SSH Python
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
 
-#System non/TLS Websocket-SSH Python
+#System non/TLS Websocket-ovpn Python
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-nontls.service && chmod +x /etc/systemd/system/ws-nontls.service
 
-#System SSL/TLS Websocket-SSH Python
-wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-nontls.service && chmod +x /etc/systemd/system/ws-ovpn.service
+#System SSL/TLS Websocket-ovpn Python
+wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-ovpn.service && chmod +x /etc/systemd/system/ws-ovpn.service
 
 #restart service
 systemctl daemon-reload
