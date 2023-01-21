@@ -27,10 +27,10 @@ echo -e "${NC}${LIGHT}Telegram : https://t.me/Hendra2012"
 exit 0
 fi
 # Link Hosting Kalian
-tarapkuhing="raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/websocket"
+tarapkuhing="raw.githubusercontent.com/Tarap-Kuhing/tarap/main/websocket"
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/ws-nontls https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/sshws/ws
+wget -q -O /usr/local/bin/ws-nontls https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-nontls
 chmod +x /usr/local/bin/ws-nontls
 
 # Installing Service
@@ -58,7 +58,7 @@ systemctl enable ws-nontls
 systemctl restart ws-nontls
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/websocket/ws-ovpn.py
+wget -q -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-ovpn.py
 chmod +x /usr/local/bin/ws-ovpn
 
 # Installing Service
@@ -86,7 +86,7 @@ systemctl enable ws-ovpn
 systemctl restart ws-ovpn
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/ws-tls https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/websocket/ws-tls
+wget -q -O /usr/local/bin/ws-tls https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-tls
 chmod +x /usr/local/bin/ws-tls
 
 # Installing Service
