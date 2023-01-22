@@ -203,6 +203,7 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 sleep 1
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/edu.sh && chmod +x edu.sh && ./edu.sh
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ohp/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 clear
