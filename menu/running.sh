@@ -264,7 +264,7 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m          ⇱ SUBSCRIPTION INFORMATION ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "❇️ Client Name : $Name"
-echo -e "❇️ Expired     : $Exp2"
+echo -e "❇️ Expired     : $Exp1"
 echo -e "❇️ Version     : Latest Version"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m            ⇱ SERVICE INFORMATION ⇲             \E[0m"
