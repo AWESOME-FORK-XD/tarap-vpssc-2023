@@ -305,7 +305,7 @@ wget -O autokill "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/
 wget -O ceklim "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/ceklim.sh"
 wget -O portovpn "https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/ssh/portovpn.sh"
 wget -O tendang "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/tendang.sh"
-wget -O insshws "https://raw.githubusercontent.com/Tarap-Kuhingtarap/main/sshws/insshws.sh"
+wget -O insshws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/insshws.sh"
 wget -O issue "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/issue.net"
 
 # menu system
