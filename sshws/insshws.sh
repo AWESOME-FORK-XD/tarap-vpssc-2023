@@ -5,14 +5,19 @@ cd
 
 #Install Script Websocket-SSH Python
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-dropbear
+wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-ovpn
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-stunnel
 
 #izin permision
 chmod +x /usr/local/bin/ws-dropbear
+chmod +x /usr/local/bin/ws-ovpn
 chmod +x /usr/local/bin/ws-stunnel
 
 #System Dropbear Websocket-SSH Python
 wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-dropbear.service && chmod +x /etc/systemd/system/ws-dropbear.service
+
+#System ovpn Websocket-SSH Python
+wget -O /etc/systemd/system/ws-ovpn https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-ovpn.service && chmod +x /etc/systemd/system/ws-ovpn.service
 
 #System SSL/TLS Websocket-SSH Python
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
@@ -24,6 +29,11 @@ systemctl daemon-reload
 systemctl enable ws-dropbear.service
 systemctl start ws-dropbear.service
 systemctl restart ws-dropbear.service
+
+#Enable & Start & Restart ws-ovpn service
+systemctl enable ws-ovpn.service
+systemctl start ws-ovpn.service
+systemctl restart ws-ovpn.service
 
 #Enable & Start & Restart ws-openssh service
 systemctl enable ws-stunnel.service
