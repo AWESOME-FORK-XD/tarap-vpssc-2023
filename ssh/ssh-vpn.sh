@@ -309,7 +309,7 @@ wget -O insshws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws
 wget -O issue "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/issue.net"
 
 # menu system
-wget -O m-system "https://raw.githubusercontent.com/Tarap-Kuhing/tarapc/main/menu/m-system.sh"
+wget -O m-system "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-system.sh"
 wget -O m-domain "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-domain.sh"
 wget -O add-host "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/add-host.sh"
 #wget -O port-change "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/port/port-change.sh"
