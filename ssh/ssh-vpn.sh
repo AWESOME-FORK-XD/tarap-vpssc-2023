@@ -308,6 +308,7 @@ wget -O tendang "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/t
 wget -O edu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/edu.sh"
 wget -O insshws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/insshws.sh"
 wget -O issue "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/issue.net"
+wget -O webmin "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/webmin.sh"
 
 # menu system
 wget -O m-system "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-system.sh"
@@ -355,6 +356,7 @@ chmod +x tendang
 chmod +x edu
 chmod +x insshws
 chmod +x issue
+chmod +x webmin
 
 chmod +x m-system
 chmod +x m-domain
