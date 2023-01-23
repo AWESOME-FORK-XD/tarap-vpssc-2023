@@ -90,7 +90,7 @@ fram=$( free -m | awk 'NR==2 {print $4}' )
 clear
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "                 • SCRIPT BY TARAP KUHING •      "
-echo -e " WA: https://api.whatsapp.com/send/?phone=6285754292950&text&type=phone_number&app_absent=0         "
+echo -e "              ♡ https://wa.me/6285754292950 ♡   "
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\e[33m OS            \e[0m:  "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`
 echo -e "\e[33m DOMAIN        \e[0m:  $domain"
