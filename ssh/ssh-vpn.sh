@@ -318,7 +318,6 @@ wget -O autokill "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/
 wget -O ceklim "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/ceklim.sh"
 wget -O portovpn "https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/ssh/portovpn.sh"
 wget -O tendang "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/tendang.sh"
-wget -O edu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/edu.sh"
 wget -O insshws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/insshws.sh"
 wget -O issue "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/issue.net"
 wget -O webmin "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/webmin.sh"
