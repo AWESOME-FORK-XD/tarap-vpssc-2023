@@ -53,7 +53,6 @@ echo -e "OpenSSH     : $opensh" | tee -a /etc/log-create-user.log
 echo -e "SSH WS      : $portsshws" | tee -a /etc/log-create-user.log
 echo -e "SSH SSL WS  : $wsssl" | tee -a /etc/log-create-user.log
 echo -e "SSL/TLS     : $ssl" | tee -a /etc/log-create-user.log
-echo -e "Ovpn no/TLS : $ssl" | tee -a /etc/log-create-user.log
 echo -e "Ovpn Ws     : 2086"
 echo -e "Port TCP    : $ovpn"
 echo -e "Port UDP    : $ovpn2"
