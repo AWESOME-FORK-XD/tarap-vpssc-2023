@@ -365,7 +365,6 @@ chmod +x autokill
 chmod +x ceklim
 chmod +x portovpn
 chmod +x tendang
-chmod +x edu
 chmod +x insshws
 chmod +x issue
 chmod +x webmin
