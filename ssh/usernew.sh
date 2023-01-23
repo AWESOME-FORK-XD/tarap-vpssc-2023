@@ -86,11 +86,10 @@ echo -e "OpenSSH     : $opensh" | tee -a /etc/log-create-user.log
 echo -e "SSH WS      : $portsshws" | tee -a /etc/log-create-user.log
 echo -e "SSH SSL WS  : $wsssl" | tee -a /etc/log-create-user.log
 echo -e "SSL/TLS     : $ssl" | tee -a /etc/log-create-user.log
-echo -e "Ovpn no/TLS : 8880"
 echo -e "Ovpn Ws     : 2086"
 echo -e "Port TCP    : $ovpn"
 echo -e "Port UDP    : $ovpn2"
-echo -e "Port SSL    : 990"
+echo -e "Port SSL    : 442"
 echo -e "OVPN TCP    : http://$IP:89/tcp.ovpn"
 echo -e "OVPN UDP    : http://$IP:89/udp.ovpn"
 echo -e "OVPN SSL    : http://$IP:89/ssl.ovpn"
