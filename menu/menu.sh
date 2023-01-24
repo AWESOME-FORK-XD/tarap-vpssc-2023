@@ -112,7 +112,9 @@ echo -e " [\e[36m•6\e[0m] System Menu"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " [\e[36m•7\e[0m] Status Service"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " [\e[36m•8\e[0m] Clear RAM Cache"
+echo -e " [\e[36m•8\e[0m] Update Menu"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e " [\e[36m•9\e[0m] Clear RAM Cache"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e   " Press x or [ Ctrl+C ] • To-Exit-Script"
 echo -e ""
@@ -131,7 +133,8 @@ case $opt in
 5) clear ; m-trojan ;;
 6) clear ; m-system ;;
 7) clear ; running ;;
-8) clear ; clearcache ;;
+8) clear ; m-update ;;
+9) clear ; clearcache ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; menu ;;
 esac
