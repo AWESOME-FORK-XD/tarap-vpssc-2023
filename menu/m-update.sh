@@ -48,7 +48,7 @@ rm -rf m-vless
 rm -rf m-trojan
 rm -rf m-system
 rm -rf m-sshovpn
-rm -rf m-ssws
+rm -rf m-sshws
 rm -rf m-webmin
 rm -rf running
 rm -rf m-domain
@@ -57,14 +57,16 @@ rm -rf m-tcp
 rm -rf auto-reboot
 rm -rf clearcache
 rm -rf restart
+rm -rf ohp
 
 # download menu
 cd /usr/bin
 rm -rf menu
 rm -rf restart
 rm -rf ssh-vpn
-
-wget -O /usr/bin/ssh-vpn "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/ssh-vpn.sh"
+rm -rf ohp
+wget -O /usr/bin/ssh-vpn "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/ssh-vpn.sh" && chmod +x /usr/bin/ssh-vpn
+wget -O /usr/bin/ohp "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ohp.sh" && chmod +x /usr/bin/ohp
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/menu.sh" && chmod +x /usr/bin/menu
 wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
 wget -O /usr/bin/m-vless "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vless.sh" && chmod +x /usr/bin/m-vless
