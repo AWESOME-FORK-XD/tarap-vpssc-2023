@@ -284,22 +284,23 @@ rm /root/setup.sh >/dev/null 2>&1
 rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
+echo " Install Script VPS By TARAP KUHING SELESAI......... "
 echo -e ""
 sleep 5
-echo "5"
-echo ""
+echo "R"
+echo -e ""
 sleep 4
-echo "4"
+echo "E"
 echo -e ""
 sleep 3
-echo "3"
+echo "B"
 echo -e ""
 sleep 2
-echo "2"
+echo "O"
 echo -e ""
 sleep 1
-echo "1"
+echo "O"
 echo -e ""
-echo " Install Script VPS By TARAP KUHING SELESAI......... "
-sleep 1
+echo "T"
+echo -e ""
 reboot
