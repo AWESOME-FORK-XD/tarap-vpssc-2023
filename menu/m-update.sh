@@ -63,9 +63,8 @@ rm -rf ohp
 cd /usr/bin
 rm -rf menu
 rm -rf restart
-rm -rf ssh-vpn
 rm -rf ohp
-wget -O /usr/bin/ssh-vpn "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/ssh-vpn.sh" && chmod +x /usr/bin/ssh-vpn
+
 wget -O /usr/bin/ohp "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ohp.sh" && chmod +x /usr/bin/ohp
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/menu.sh" && chmod +x /usr/bin/menu
 wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
@@ -84,7 +83,7 @@ wget -O /usr/bin/clearcache "https://raw.githubusercontent.com/Tarap-Kuhing/tara
 wget -O /usr/bin/restart "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/restart.sh" && chmod +x /usr/bin/restart
 wget -O /usr/bin/update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh" && chmod +x /usr/bin/m-update
 
-chmod +x ssh-vpn
+chmod +x ohp
 chmod +x menu
 chmod +x m-vmess
 chmod +x m-vless
