@@ -3,10 +3,7 @@ import socket, threading, thread, select, signal, sys, time, getopt
 
 # Listen
 LISTENING_ADDR = '0.0.0.0'
-if sys.argv[1:]:
-	LISTENING_PORT = sys.argv[1]
-else:
-	LISTENING_PORT = 2082
+LISTENING_PORT = sys.argv[1]
 
 # Pass
 PASS = ''
@@ -15,7 +12,7 @@ PASS = ''
 BUFLEN = 4096 * 4
 TIMEOUT = 60
 DEFAULT_HOST = '127.0.0.1:1194'
-RESPONSE = 'HTTP/1.1 101 <b><font color="green"> By TARAP KUHING Switching Protocols</font></b><font color="cyan"><b>\r\n\r\nContent-Length: 104857600000\r\n\r\n'
+RESPONSE = 'HTTP/1.1 101 <b><font color="green"> TARAP KUHING Switching Protocols</font></b><font color="cyan"><b>\r\n\r\nContent-Length: 104857600000\r\n\r\n'
 
 class Server(threading.Thread):
     def __init__(self, host, port):
@@ -128,7 +125,7 @@ class ConnectionHandler(threading.Thread):
 
             if hostPort != '':
                 passwd = self.findHeader(self.client_buffer, 'X-Pass')
-				
+
                 if len(PASS) != 0 and passwd == PASS:
                     self.method_CONNECT(hostPort)
                 elif len(PASS) != 0 and passwd != PASS:
@@ -232,7 +229,7 @@ def print_usage():
 def parse_args(argv):
     global LISTENING_ADDR
     global LISTENING_PORT
-    
+
     try:
         opts, args = getopt.getopt(argv,"hb:p:",["bind=","port="])
     except getopt.GetoptError:
