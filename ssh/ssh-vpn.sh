@@ -190,12 +190,6 @@ echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/ssh restart
 /etc/init.d/dropbear restart
 
-# install squid
-cd
-apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/squid3.conf"
-sed -i $MYIP2 /etc/squid/squid.conf
-
 cd
 # install stunnel
 apt install stunnel4 -y
