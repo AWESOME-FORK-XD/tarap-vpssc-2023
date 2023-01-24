@@ -285,22 +285,22 @@ rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo " Install Script VPS By TARAP KUHING SELESAI......... "
-echo -e ""
+echo  ""
 sleep 5
 echo "R"
-echo -e ""
+echo  ""
 sleep 4
 echo "E"
-echo -e ""
+echo  ""
 sleep 3
 echo "B"
-echo -e ""
+echo ""
 sleep 2
 echo "O"
-echo -e ""
+echo ""
 sleep 1
 echo "O"
-echo -e ""
+echo  ""
 echo "T"
-sleep 0,5
+sleep 1
 reboot
