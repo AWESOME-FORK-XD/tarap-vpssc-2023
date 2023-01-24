@@ -190,6 +190,52 @@ echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/ssh restart
 /etc/init.d/dropbear restart
 
+# Install SSLH
+apt -y install sslh
+rm -f /etc/default/sslh
+
+# Settings SSLH
+cat > /etc/default/sslh <<-END
+# Default options for sslh initscript
+# sourced by /etc/init.d/sslh
+# Disabled by default, to force yourself
+# to read the configuration:
+# - /usr/share/doc/sslh/README.Debian (quick start)
+# - /usr/share/doc/sslh/README, at "Configuration" section
+# - sslh(8) via "man sslh" for more configuration details.
+# Once configuration ready, you *must* set RUN to yes here
+# and try to start sslh (standalone mode only)
+RUN=yes
+# binary to use: forked (sslh) or single-thread (sslh-select) version
+# systemd users: don't forget to modify /lib/systemd/system/sslh.service
+DAEMON=/usr/sbin/sslh
+DAEMON_OPTS="--user sslh --listen 0.0.0.0:700 --ssl 127.0.0.1:700 --ssh 127.0.0.1:109 --openvpn 127.0.0.1:1194--pidfile /var/run/sslh/sslh.pid -n"
+END
+
+# Restart Service SSLH
+service sslh restart
+systemctl restart sslh
+/etc/init.d/sslh restart
+/etc/init.d/sslh status
+/etc/init.d/sslh restart
+
+# setting vnstat
+apt -y install vnstat
+/etc/init.d/vnstat restart
+apt -y install libsqlite3-dev
+wget https://humdi.net/vnstat/vnstat-2.6.tar.gz
+tar zxvf vnstat-2.6.tar.gz
+cd vnstat-2.6
+./configure --prefix=/usr --sysconfdir=/etc && make && make install
+cd
+vnstat -u -i $NET
+sed -i 's/Interface "'""eth0""'"/Interface "'""$NET""'"/g' /etc/vnstat.conf
+chown vnstat:vnstat /var/lib/vnstat -R
+systemctl enable vnstat
+/etc/init.d/vnstat restart
+rm -f /root/vnstat-2.6.tar.gz
+rm -rf /root/vnstat-2.6
+
 cd
 # install stunnel
 apt install stunnel4 -y
@@ -213,7 +259,7 @@ accept = 444
 connect = 700
 
 [openvpn]
-accept = 2086
+accept = 990
 connect = 127.0.0.1:1194
 
 END
@@ -420,28 +466,31 @@ apt autoremove -y >/dev/null 2>&1
 # finishing
 cd
 chown -R www-data:www-data /home/vps/public_html
-sleep 0.5
+sleep 1
 echo -e "$yell[SERVICE]$NC Restart All service SSH & OVPN"
 /etc/init.d/nginx restart >/dev/null 2>&1
-sleep 0.5
+sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting nginx"
 /etc/init.d/openvpn restart >/dev/null 2>&1
-sleep 0.5
+sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting cron "
 /etc/init.d/ssh restart >/dev/null 2>&1
-sleep 0.5
+sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting ssh "
 /etc/init.d/dropbear restart >/dev/null 2>&1
-sleep 0.5
+sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting dropbear "
 /etc/init.d/fail2ban restart >/dev/null 2>&1
-sleep 0.5
+sleep 1
+echo -e "[ ${green}ok${NC} ] Restarting fail2ban "
+/etc/init.d/sslh restart >/dev/null 2>&1
+sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting fail2ban "
 /etc/init.d/stunnel4 restart >/dev/null 2>&1
-sleep 0.5
+sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting stunnel4 "
 /etc/init.d/vnstat restart >/dev/null 2>&1
-sleep 0.5
+sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting vnstat "
 /etc/init.d/squid restart >/dev/null 2>&1
 
