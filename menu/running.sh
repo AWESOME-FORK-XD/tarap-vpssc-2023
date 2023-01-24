@@ -90,7 +90,7 @@ wstls=$(systemctl status ws-stunnel.service | grep Active | awk '{print $3}' | c
 wsdrop=$(systemctl status ws-dropbear.service | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 wsovpn=$(systemctl status ws-ovpn | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 wsopen=$(systemctl status ws-openssh | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-#osslh=$(systemctl status sslh | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+osslh=$(systemctl status sslh | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 ohp=$(systemctl status dropbear-ohp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 ohq=$(systemctl status openvpn-ohp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 ohr=$(systemctl status ssh-ohp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
@@ -208,6 +208,34 @@ else
    swsdrop="${RED}  Not Running ${NC}  ( Error )${NC}"
 fi
 
+# STATUS SERVICE SSLH / SSH
+if [[ $osslh == "running" ]]; then 
+   sosslh=" ${GREEN}Running ${NC}( No Error )${NC}"
+else
+   sosslh="${RED}  Not Running ${NC}  ( Error )${NC}"
+fi
+
+# STATUS OHP DROPBEAR
+if [[ $ohp == "running" ]]; then 
+   sohp=" ${GREEN}Running ${NC}( No Error )${NC}"
+else
+   sohp="${RED}  Not Running ${NC}  ( Error )${NC}"
+fi
+
+# STATUS OHP OpenVPN
+if [[ $ohq == "running" ]]; then 
+   sohq=" ${GREEN}Running ${NC}( No Error )${NC}"
+else
+   sohq="${RED}  Not Running ${NC}  ( Error )${NC}"
+fi
+
+# STATUS OHP SSH
+if [[ $ohr == "running" ]]; then 
+   sohr=" ${GREEN}Running ${NC}( No Error )${NC}"
+else
+   sohr="${RED}  Not Running ${NC}  ( Error )${NC}"
+fi
+
 # STATUS SHADOWSOCKS
 if [[ $shadowsocks == "running" ]]; then
    status_shadowsocks=" ${GREEN}Running ${NC}( No Error )${NC}"
@@ -285,5 +313,9 @@ echo -e "❇️ XRAYS Trojan            :$status_virus_trojan"
 echo -e "❇️ Shadowsocks             :$status_shadowsocks"
 echo -e "❇️ Websocket TLS           :$swstls"
 echo -e "❇️ Websocket None TLS      :$swstls"
+echo -e "❇️ OHP Dropbear            :$sohp"
+echo -e "❇️ OHP OpenVPN             :$sohq"
+echo -e "❇️ OHP SSH                 :$sohr"
+echo -e "❇️ SSL / SSH Multiplexer   :$sosslh"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
