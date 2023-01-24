@@ -213,7 +213,7 @@ accept = 444
 connect = 700
 
 [openvpn]
-accept = 442
+accept = 2086
 connect = 127.0.0.1:1194
 
 END
