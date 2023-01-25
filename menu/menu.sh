@@ -116,6 +116,9 @@ echo -e " [\e[36m•8\e[0m] Update Menu"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " [\e[36m•9\e[0m] Clear RAM Cache"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e " [\e[36m•10\e[0m] sl-fix (Perbaiki Error SSLH+WS-TLS"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e   " Press x or [ Ctrl+C ] • To-Exit-Script"
 echo -e ""
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -135,6 +138,7 @@ case $opt in
 7) clear ; running ;;
 8) clear ; m-update ;;
 9) clear ; clearcache ;;
+10) clear ; sl-fix ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; menu ;;
 esac
