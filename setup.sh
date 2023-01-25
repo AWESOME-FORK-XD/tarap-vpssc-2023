@@ -189,67 +189,32 @@ read -rp "Masukan domain kamu Disini : " -e dns
         echo "IP=$dns" > /var/lib/ipvps.conf
     fi
 
-#THEME RED
-cat <<EOF>> /etc/alexxa/theme/red
-BG : \E[40;1;41m
-TEXT : \033[0;31m
-EOF
-#THEME BLUE
-cat <<EOF>> /etc/alexxa/theme/blue
-BG : \E[40;1;44m
-TEXT : \033[0;34m
-EOF
-#THEME GREEN
-cat <<EOF>> /etc/alexxa/theme/green
-BG : \E[40;1;42m
-TEXT : \033[0;32m
-EOF
-#THEME YELLOW
-cat <<EOF>> /etc/alexxa/theme/yellow
-BG : \E[40;1;43m
-TEXT : \033[0;33m
-EOF
-#THEME MAGENTA
-cat <<EOF>> /etc/alexxa/theme/magenta
-BG : \E[40;1;43m
-TEXT : \033[0;33m
-EOF
-#THEME CYAN
-cat <<EOF>> /etc/alexxa/theme/cyan
-BG : \E[40;1;46m
-TEXT : \033[0;36m
-EOF
-#THEME CONFIG
-cat <<EOF>> /etc/alexxa/theme/color.conf
-blue
-EOF
-
 #install ssh ovpn
 echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${tyblue}|      PROCESS INSTALLED SSH & OPENVPN      |${NC}"
 echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-sleep 3
+sleep 5
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Install Xray
 echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${tyblue}|           PROCESS INSTALLED XRAY         |${NC}"
 echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-sleep 3
+sleep 5
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 #Install SSH Websocket
 echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${tyblue}|       PROCESS INSTALLED WEBSOCKET SSH     |${NC}"
 echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-sleep 3
+sleep 5
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 #Install OHP Websocket
 echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${tyblue}|           PROCESS INSTALLED OHP           |${NC}"
 echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-sleep 3
+sleep 5
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 clear
@@ -330,7 +295,6 @@ echo "" | tee -a log-install.txt
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
-rm /root/m-update.sh
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo " Install Script VPS By TARAP KUHING SELESAI......... "
 echo  ""
