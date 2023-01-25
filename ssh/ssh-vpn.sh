@@ -487,7 +487,7 @@ sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting fail2ban "
 /etc/init.d/sslh restart >/dev/null 2>&1
 sleep 1
-echo -e "[ ${green}ok${NC} ] Restarting fail2ban "
+echo -e "[ ${green}ok${NC} ] Restarting sslh "
 /etc/init.d/stunnel4 restart >/dev/null 2>&1
 sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting stunnel4 "
