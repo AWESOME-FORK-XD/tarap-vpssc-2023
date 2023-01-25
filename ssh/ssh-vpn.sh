@@ -315,7 +315,7 @@ sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dr
 wget -O /etc/issue.net "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/issue.net"
 
 #install bbr dan optimasi kernel
-wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+#wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # blokir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -384,7 +384,7 @@ wget -O m-tcp "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/tc
 
 wget -O xp "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/xp.sh"
 #wget -O asu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/asu.sh"
-wget -O sl-fix "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sslh-fix"
+wget -O sl-fix "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sl-fix"
 
 chmod +x sl-fix
 chmod +x menu
@@ -512,7 +512,6 @@ echo "unset HISTFILE" >> /etc/profile
 rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/ssh-vpn.sh
-rm -f /root/bbr.sh
 
 # finihsing
 clear
