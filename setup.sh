@@ -163,17 +163,17 @@ mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 
 echo ""
-wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh && chmod +x tools.sh && ./tools.sh
+wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
-echo -e  "|\033[1;31m============================================\033[0m|"
+echo -e  "|\033[1;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m|"
 echo -e  "|\033[0;33m    TERIMA KASIH SUDAH MENGGUNAKAN SCRIPT   \033[0;33m|"
 echo -e  "|\033[0;33m         DARI SAYA BY TARAP KUHING          \033[0;33m|"
-echo -e  "|\033[0;33m            TAMBAHKAN DOMAIN KAMU           \033[0;33m|"
+echo -e  "|\033[0;33m        TAMBAHKAN DOMAIN KAMU  DISINI       \033[0;33m|"
 echo -e  "|\033[0;33m          KALAU TIDAK PUNYA DOMAIN          \033[0;33m|"
-echo -e  "|\033[0;33m             CHAT SAYA DULU OK....          \033[0;33m|"
-echo -e  "|\033[0;33m              WA: 085754292950              \033[0;33m|"
-echo -e  "|\033[1;31m============================================\033[0m|"
+echo -e  "|\033[0;33m          CHAT DI WA SAYA DULU OK....       \033[0;33m|"
+echo -e  "|\033[0;33m          https://wa.me/085754292950        \033[0;33m|"
+echo -e  "|\033[1;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m|"
 echo " "
 read -rp "Masukan domain kamu Disini : " -e dns
     if [ -z $dns ]; then
@@ -189,22 +189,75 @@ read -rp "Masukan domain kamu Disini : " -e dns
         echo "IP=$dns" > /var/lib/ipvps.conf
     fi
 
+#THEME RED
+cat <<EOF>> /etc/alexxa/theme/red
+BG : \E[40;1;41m
+TEXT : \033[0;31m
+EOF
+#THEME BLUE
+cat <<EOF>> /etc/alexxa/theme/blue
+BG : \E[40;1;44m
+TEXT : \033[0;34m
+EOF
+#THEME GREEN
+cat <<EOF>> /etc/alexxa/theme/green
+BG : \E[40;1;42m
+TEXT : \033[0;32m
+EOF
+#THEME YELLOW
+cat <<EOF>> /etc/alexxa/theme/yellow
+BG : \E[40;1;43m
+TEXT : \033[0;33m
+EOF
+#THEME MAGENTA
+cat <<EOF>> /etc/alexxa/theme/magenta
+BG : \E[40;1;43m
+TEXT : \033[0;33m
+EOF
+#THEME CYAN
+cat <<EOF>> /etc/alexxa/theme/cyan
+BG : \E[40;1;46m
+TEXT : \033[0;36m
+EOF
+#THEME CONFIG
+cat <<EOF>> /etc/alexxa/theme/color.conf
+blue
+EOF
+
 #install ssh ovpn
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green      Install SSH Websocket By TARAP KUHING              $NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-sleep 5
+echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${tyblue}|      PROCESS INSTALLED SSH & OPENVPN      |${NC}"
+echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
-#Instal Xray
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Install XRAY By TARAP KUHING             $NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-sleep 5
+#Install Xray
+echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${tyblue}|           PROCESS INSTALLED XRAY         |${NC}"
+echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+#Install SSH Websocket
+echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${tyblue}|       PROCESS INSTALLED WEBSOCKET SSH     |${NC}"
+echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+sleep 2
+clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+#Install OHP Websocket
+echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${tyblue}|           PROCESS INSTALLED OHP           |${NC}"
+echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+sleep 2
+clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+#Download Extra Menu
+echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${tyblue}|           DOWNLOAD EXTRA MENU            |${NC}"
+echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+sleep 2
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh && chmod +x update.sh && ./update.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
@@ -243,62 +296,63 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=================-[ Script By TARAP KUHING ]-================"
+echo "━━━━━━━━━━━━━━━━━━[ Script By TARAP KUHING ]━━━━━━━━━━━━━━━━━━"
 echo ""
-echo "------------------------------------------------------------"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 echo ""
-echo "   >>> Service & Port"  | tee -a log-install.txt
+echo "   >>> Service & Port "              | tee -a log-install.txt
 echo "   - OpenSSH                  : 22"  | tee -a log-install.txt
 echo "   - SSH Websocket            : 80 [ON]" | tee -a log-install.txt
 echo "   - SSH SSL Websocket        : 443, 444" | tee -a log-install.txt
 echo "   - Stunnel4                 : 8443, 8880" | tee -a log-install.txt
 echo "   - Dropbear                 : 109, 143" | tee -a log-install.txt
 echo "   - Badvpn                   : 7100-7900" | tee -a log-install.txt
-echo "   - Nginx                    : 81" | tee -a log-install.txt
+echo "   - Nginx                    : 89"  | tee -a log-install.txt
 echo "   - Vmess WS TLS             : 443" | tee -a log-install.txt
 echo "   - Vless WS TLS             : 443" | tee -a log-install.txt
 echo "   - Trojan WS TLS            : 443" | tee -a log-install.txt
 echo "   - Shadowsocks WS TLS       : 443" | tee -a log-install.txt
-echo "   - Vmess WS none TLS        : 80" | tee -a log-install.txt
-echo "   - Vless WS none TLS        : 80" | tee -a log-install.txt
-echo "   - Trojan WS none TLS       : 80" | tee -a log-install.txt
-echo "   - Shadowsocks WS none TLS  : 80" | tee -a log-install.txt
+echo "   - Vmess WS none TLS        : 80"  | tee -a log-install.txt
+echo "   - Vless WS none TLS        : 80"  | tee -a log-install.txt
+echo "   - Trojan WS none TLS       : 80"  | tee -a log-install.txt
+echo "   - Shadowsocks WS none TLS  : 80"  | tee -a log-install.txt
 echo "   - Vmess gRPC               : 443" | tee -a log-install.txt
 echo "   - Vless gRPC               : 443" | tee -a log-install.txt
 echo "   - Trojan gRPC              : 443" | tee -a log-install.txt
 echo "   - Shadowsocks gRPC         : 443" | tee -a log-install.txt
-echo "   - Websocket Ovpn          : 2086"  | tee -a log-install.txt
-echo "   - OHP SSH                 : 8181"  | tee -a log-install.txt
-echo "   - OHP Dropbear            : 8282"  | tee -a log-install.txt
-echo "   - OHP OpenVPN             : 8383"  | tee -a log-install.txt
+echo "   - Websocket Ovpn           : 2086"| tee -a log-install.txt
+echo "   - OHP SSH                  : 8181"| tee -a log-install.txt
+echo "   - OHP Dropbear             : 8282"| tee -a log-install.txt
+echo "   - OHP OpenVPN              : 8383"| tee -a log-install.txt
 echo ""
 echo ""
-echo "------------------------------------------------------------"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
-echo "=================-[ Script By TARAP KUHING ]-================"
+echo "━━━━━━━━━━━━━━━━━━[ Script By TARAP KUHING ]━━━━━━━━━━━━━━━━━━"
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
+rm /root/m-update.sh
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo " Install Script VPS By TARAP KUHING SELESAI......... "
 echo  ""
-sleep 5
+sleep 3
 echo "R"
 echo  ""
-sleep 4
+sleep 3
 echo "E"
 echo  ""
 sleep 3
 echo "B"
 echo ""
-sleep 2
+sleep 3
 echo "O"
 echo ""
-sleep 1
+sleep 3
 echo "O"
 echo  ""
 echo "T"
