@@ -141,8 +141,8 @@ sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
 echo -e "[ ${green}INFO${NC} ] Preparing the install file"
 apt install git curl -y >/dev/null 2>&1
 apt install python -y >/dev/null 2>&1
-echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
-sleep 0.5
+echo -e "[ ${green}INFO${NC} ] Selamat... File Instalasi Sudah Siap Brooo...."
+sleep 1
 echo -ne "[ ${green}INFO${NC} ] Check permission : "
 
 PERMISSION
@@ -163,8 +163,8 @@ mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 
 echo ""
-#wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
-#rm tools.sh
+wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh && chmod +x tools.sh && ./tools.sh
+rm tools.sh
 clear
 echo -e  "|\033[1;31m============================================\033[0m|"
 echo -e  "|\033[0;33m    TERIMA KASIH SUDAH MENGGUNAKAN SCRIPT   \033[0;33m|"
